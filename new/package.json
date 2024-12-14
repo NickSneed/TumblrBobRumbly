@@ -1,0 +1,24 @@
+{
+  "name": "tumblrbobrumbly",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "imagesloaded": "5.0.0",
+    "infinite-scroll": "4.0.1",
+    "jquery": "3.5.1",
+    "jquery-bridget": "3.0.1",
+    "masonry-layout": "4.2.2"
+  }
+}

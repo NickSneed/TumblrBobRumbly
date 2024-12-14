@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Infinite Scroll v4 - Loading JSON + Masonry, vanilla JS</h1>
+
+    <p>Loading photos from the <a
+            href="https://unsplash.com/developers?utm_source=infinite-scroll-demos&utm_medium=referral&utm_campaign=api-credit">Unsplash
+            API</a></p>
+
+    <div class="grid">
+        <div class="grid__col-sizer"></div>
+        <div class="grid__gutter-sizer"></div>
+    </div>
+
+    <div class="page-load-status">
+        <div class="loader-ellips infinite-scroll-request">
+            <span class="loader-ellips__dot"></span>
+            <span class="loader-ellips__dot"></span>
+            <span class="loader-ellips__dot"></span>
+            <span class="loader-ellips__dot"></span>
+        </div>
+        <p class="infinite-scroll-last">End of content</p>
+        <p class="infinite-scroll-error">No more pages to load</p>
+    </div>
+    <script type="text/html" id="photo-item-template">
+    <div class="photo-item">
+        <img class="photo-item__image" src="{{urls.regular}}" alt="Photo by {{user.name}}" />
+        <p class="photo-item__caption">
+        <a href="{{user.links.html}}?utm_source=infinite-scroll-demos&utm_medium=referral&utm_campaign=api-credit">{{user.name}}</a>
+        </p>
+    </div>
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
