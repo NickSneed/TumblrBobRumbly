@@ -17,7 +17,7 @@ function init() {
     // Make imagesLoaded available for InfiniteScroll
     InfiniteScroll.imagesLoaded = imagesLoaded;
 
-    // Initialzing InfiniteScroll
+    // Initializing InfiniteScroll
     let infScroll = new InfiniteScroll('#posts', {
         path: '#next-button',
         outlayer: msnry,
@@ -29,7 +29,6 @@ function init() {
 
     // Trigger layout after initial images load
     imagesLoaded(document.querySelector('#posts'), function (instance) {
-        console.log('all images are loaded');
         msnry.layout();
     });
 

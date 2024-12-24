@@ -72,7 +72,7 @@
                 <section>
                     <img src="{image:Logo}"/>
                     <h1><a href="/">{Title}</a></h1>
-                    <h2>{text:Tagline}</h2> {block:Description}
+                    <h2 class="txt-label-maker">{text:Tagline}</h2> {block:Description}
                     <p>{Description}</p>
                     {/block:Description}
                     <a href="{RSS}" {Target}>RSS</a>
@@ -192,9 +192,15 @@
                 {/block:Pagination}
                 {block:IndexPage} 
                 <div class="page-load-status">
-                    <p class="infinite-scroll-request">Loading...</p>
-                    <p class="infinite-scroll-last">End of content</p>
-                    <p class="infinite-scroll-error">No more pages to load</p>
+                    <p class="infinite-scroll-request">
+                        <span class="txt-label-maker">Loading...</span>
+                    </p>
+                    <p class="infinite-scroll-last">
+                        <span class="txt-label-maker">End of content</span>
+                    </p>
+                    <p class="infinite-scroll-error">
+                        <span class="txt-label-maker">No more pages to load</span>
+                    </p>
                 </div>
                 {/block:IndexPage}
                 <div class="footer-copy">&copy; {CopyrightYears}</div>
@@ -202,7 +208,16 @@
         </section>
     </section>
 
-	<script src="https://static.tumblr.com/g82vxpi/cSjsozbtw/main.js"></script>
+	<script src="https://static.tumblr.com/g82vxpi/iFysozcqk/main.js"></script>
+   
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21820816-2', 'auto');
+        ga('send', 'pageview');
+    </script>
     
 </body>
 </html>
