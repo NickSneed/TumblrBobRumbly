@@ -25,7 +25,11 @@ function init() {
         history: false,
         prefill: true,
         append: '.post'
-    }).loadNextPage().then( function(loaded) {
+    });
+
+    // Trigger layout after initial images load
+    imagesLoaded(document.querySelector('#posts'), function (instance) {
+        console.log('all images are loaded');
         msnry.layout();
     });
 
