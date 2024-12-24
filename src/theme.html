@@ -2,6 +2,7 @@
 
 <head>
     <title>{Title}</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="color:Background" content="#efefef" />
     <meta name="color:Text" content="#000" />
@@ -13,10 +14,12 @@
     <meta name="image:Background Small" content="{BackImageSmall}" />
     <meta name="image:Background" content="{BackImage}" /> {block:Description}
     <meta name="description" content="{MetaDescription}" /> {/block:Description}
+    
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    
     <style>
         body {
             color: {color:Text} !important;
@@ -93,6 +96,9 @@
                     </a> 
                     {/block:IndexPage}
                     {block:PermalinkPage} 
+                    <a href="/"  title="Back">
+                        &lt; Back
+                    </a>
                     <a href="/"  title="Back">
                         <img src="{PhotoURL-HighRes}" class="photo-img" alt="{PhotoAlt}"/>
                     </a>
@@ -212,3 +218,6 @@
 
 
 
+
+
+<!-- leaving space for assets in editor -->
