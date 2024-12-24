@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/app.js',
     mode: 'production',
     output: {
         filename: 'main.js',
@@ -13,17 +13,5 @@ module.exports = {
             'imagesloaded': 'imagesloaded',
             'infinite-scroll': 'infinite-scroll'
         }
-    },
-    module: {
-        rules: [
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
-            }
-        ]
     }
 };
