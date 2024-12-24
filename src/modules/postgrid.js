@@ -1,9 +1,3 @@
-/*
-const Masonry = require('masonry-layout');
-const InfiniteScroll = require('infinite-scroll');
-const imagesLoaded = require('imagesloaded');
-*/
-
 import Masonry from "masonry-layout";
 import InfiniteScroll from "infinite-scroll";
 import imagesLoaded from "imagesloaded";
