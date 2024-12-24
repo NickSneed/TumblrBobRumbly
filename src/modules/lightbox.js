@@ -6,7 +6,14 @@ function attachListener() {
 
     // Add a click listener to each element
     elements.forEach(element => {
+
+        if (element.dataset.lightbox === 'initialized') {
+            return;
+        }
+
         element.addEventListener('click', (event) => {
+
+            console.log('click');
 
             event.preventDefault();
             
@@ -38,6 +45,8 @@ function attachListener() {
                 }
             }
         });
+        
+        element.setAttribute('data-lightbox', 'initialized');
     });
 }
 
