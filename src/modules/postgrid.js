@@ -1,6 +1,12 @@
+/*
 const Masonry = require('masonry-layout');
 const InfiniteScroll = require('infinite-scroll');
 const imagesLoaded = require('imagesloaded');
+*/
+
+import Masonry from "masonry-layout";
+import InfiniteScroll from "infinite-scroll";
+import imagesLoaded from "imagesloaded";
 
 function init() {
     // Define Masonry grid
@@ -18,7 +24,7 @@ function init() {
     InfiniteScroll.imagesLoaded = imagesLoaded;
 
     // Initializing InfiniteScroll
-    let infScroll = new InfiniteScroll('#posts', {
+    new InfiniteScroll('#posts', {
         path: '#next-button',
         outlayer: msnry,
         status: '.page-load-status',
@@ -28,7 +34,7 @@ function init() {
     });
 
     // Trigger layout after initial images load
-    imagesLoaded(document.querySelector('#posts'), function (instance) {
+    imagesLoaded(document.querySelector('#posts'), function () {
         msnry.layout();
     });
 
