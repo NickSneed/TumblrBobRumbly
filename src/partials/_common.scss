@@ -1,4 +1,4 @@
-@use 'colors.scss';
+@use 'colors.scss' as c;
 
 *,
 html {
@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background: colors.$lightgray;
+    background: c.$lightgray;
     font: 400 13px/1.8em 'Varela Round', sans-serif;
     margin: 0;
     padding: 0 0 60px;
@@ -46,7 +46,7 @@ h3 {
 }
 
 h3 {
-    border-bottom: 1px dotted #aaa;
+    border-bottom: 1px dotted c.$gray;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2em;
@@ -81,8 +81,8 @@ iframe#youtube_iframe {
 .txt-label-maker {
     -ms-transform: rotate(-2deg);
     -webkit-transform: rotate(-2deg);
-    background: #000;
-    color: #fff;
+    background: c.$black;
+    color: c.$white;
     display: inline-block;
     font-family: 'Overpass Mono', monospace;
     font-size: 22px;

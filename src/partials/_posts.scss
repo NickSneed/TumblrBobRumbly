@@ -1,3 +1,5 @@
+@use 'colors.scss' as c;
+
 .posts {
     margin: 0 auto;
     padding: 6% 0 0;
@@ -19,7 +21,7 @@
 }
 
 .post img {
-    background: #fff;
+    background: c.$white;
 }
 
 .show-lightbox {
@@ -55,10 +57,10 @@
 }
 
 .time-ago {
-    background: #000;
+    background: c.$black;
     display: block;
     padding: 0 0.3em;
-    color: #fff;
+    color: c.$white;
     float: right;
     text-transform: capitalize;
 }
@@ -78,7 +80,7 @@
 }
 
 .photo-set-wrapper {
-    background: #000;
+    background: c.$black;
     margin-bottom: 15px;
     width: 100%;
 
