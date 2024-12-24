@@ -64,16 +64,18 @@
 <body class="{block:IndexPage}page-{currentPage} page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage} ">
     <button id="to-top" class="to-top-arrow"></button>
     <section class="main-wrapper cf">
-        <header>
-            <section>
-                <img src="{image:Logo}"/>
-                <h1><a href="/">{Title}</a></h1>
-                <h2>{text:Tagline}</h2> {block:Description}
-                <p>{Description}</p>
-                {/block:Description}
-                <a href="{RSS}" {Target}>RSS</a>
-            </section>
-        </header>
+        {block:IndexPage}
+            <header>
+                <section>
+                    <img src="{image:Logo}"/>
+                    <h1><a href="/">{Title}</a></h1>
+                    <h2>{text:Tagline}</h2> {block:Description}
+                    <p>{Description}</p>
+                    {/block:Description}
+                    <a href="{RSS}" {Target}>RSS</a>
+                </section>
+            </header>
+        {/block:IndexPage}
         <section>
             <ul class="posts" id="posts">
                 <li class="grid-sizer"></li>
@@ -177,17 +179,6 @@
             <footer>
                 {block:Pagination}
                 <div class="page-wrapper" id="page-nav">
-                    {block:PreviousPage}
-                        <a href="{PreviousPage}"><span class="icon-arrow-left icon-page"></span></a> 
-                    {/block:PreviousPage} 
-                    {block:JumpPagination length="5"} 
-                        {block:currentPage}
-                            <span class="current-page">{PageNumber}</span> 
-                        {/block:currentPage} 
-                        {block:JumpPage}
-                            <a class="jump-page" href="{URL}">{PageNumber}</a> 
-                        {/block:JumpPage} 
-                    {/block:JumpPagination} 
                     {block:NextPage}
                         <a href="{NextPage}" id="next-button"><span class="icon-arrow-right icon-page"></span></a>
                     {/block:NextPage}
