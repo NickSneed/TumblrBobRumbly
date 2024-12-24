@@ -1,3 +1,5 @@
+const scrollToTopButton = document.getElementById('to-top');
+
 // Smooth scrolling to top
 function scrollToTop() {
     window.scrollTo({
@@ -6,26 +8,28 @@ function scrollToTop() {
     });
 }
 
+// Set the display of the button
+function setToTopDisplay() {
+    if (window.scrollY > 500) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+}
+
+// Initialize
 function init() {
-    // Example usage with a button
-    const scrollToTopButton = document.getElementById('to-top');
-
-    scrollToTopButton.addEventListener('click', scrollToTop);
-
     if (scrollToTopButton) {
+        // Event listener for button click
         scrollToTopButton.addEventListener('click', scrollToTop);
 
         // Show button when scrolled 500px down
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scrollToTopButton.style.display = 'block';
-            } else {
-                scrollToTopButton.style.display = 'none';
-            }
+            setToTopDisplay();
         });
 
-        // Initially hide the button
-        scrollToTopButton.style.display = 'none';
+        // Set initial display
+        setToTopDisplay()
     }
 }
 
