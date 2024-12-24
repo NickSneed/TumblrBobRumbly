@@ -18,11 +18,14 @@
     margin: 0 0 6%;
     position: relative;
     width: 100%;
+
+    .show-lightbox {
+        display: block;
+    }
 }
 
 .post img {
     background: c.$white;
-    margin: 0
 }
 
 .show-lightbox {

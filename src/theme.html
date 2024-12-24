@@ -4,20 +4,22 @@
     <title>{Title}</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="color:Background" content="#efefef" />
+    <meta name="color:Bgr Color" content="#efefef" />
     <meta name="color:Icons" content="#000" />
     <meta name="text:Tagline" content="" />
     <meta name="image:Logo" content="{HeaderImage}" />
-    <meta name="image:Background Small" content="{BackImageSmall}" />
-    <meta name="image:Background" content="{BackImage}" /> {block:Description}
-    <meta name="description" content="{MetaDescription}" /> {/block:Description}
+    <meta name="image:Bgr Image Small" content="{BackImageSmall}" />
+    <meta name="image:Bgr Image Large" content="{BackImage}" /> 
+    {block:Description}
+        <meta name="description" content="{MetaDescription}" /> 
+    {/block:Description}
     
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://static.tumblr.com/g82vxpi/mb8sp0dlp/styles.css" rel="stylesheet">
+    <link href="https://static.tumblr.com/g82vxpi/nGmsp0e5g/styles.css" rel="stylesheet">
 
     <style>
         .to-top-arrow {
@@ -25,13 +27,13 @@
         }
         
         header {
-            background-image: url('{image:Background Small}') !important;
-            background-color: {color:Background} !important;
+            background-image: url('{image:Bgr Image Small}') !important;
+            background-color: {color:Bgr Color} !important;
         }
      
         @media (min-width: 960px) {
             header {
-                background-image: url('{image:Background}') !important;
+                background-image: url('{image:Bgr Image Large}') !important;
             }
         }
 
@@ -192,7 +194,7 @@
         </section>
     </section>
 
-	<script src="https://static.tumblr.com/g82vxpi/FRAsp0cz0/main.js"></script>
+	<script src="https://static.tumblr.com/g82vxpi/50ysp0dz1/main.js"></script>
    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
