@@ -1,0 +1,95 @@
+*, html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background: #eee;
+    font: 400 13px/1.8em 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0 0 60px 0;
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+a,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+div,
+h1,
+h2,
+h3,
+blockquote {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    background: #000;
+    display: inline-block;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.8em;
+    padding: 0 0.3em;
+    -ms-transform: rotate(-2deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-2deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-2deg);
+}
+
+h3 {
+    border-bottom: 1px dotted #aaa;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+img {
+    display: block;
+    margin: 0;
+}
+
+iframe#youtube_iframe {
+    width: 100% !important;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

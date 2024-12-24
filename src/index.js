@@ -1,4 +1,4 @@
-import * as css from "./styles.css";
+import "./styles.scss";
 
 import topbutton from "./modules/topbutton.js";
 import postgrid from "./modules/postgrid.js";

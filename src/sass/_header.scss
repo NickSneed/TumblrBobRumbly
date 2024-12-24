@@ -1,0 +1,57 @@
+header {
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    text-align: center;
+
+    section {
+        font-size: 20px;
+        max-width: 500px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    h1 {
+        font-family: 'Overpass Mono', monospace;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.2em;
+        -ms-transform: rotate(3deg);
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+
+    section h2 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .home-icon-wrapper {
+        background-position: 50% 50%;
+        background-repeat: none;
+        background-size: cover;
+        /*border-radius: 2000px;*/
+        margin: 20px auto 30px auto;
+        max-width: 250px;
+    }
+
+    .home-icon-wrapper .spacer {
+        padding-bottom: 100%;
+        width: 100%;
+    }
+
+    @media (min-width: 960px) {
+        background-position: 50% 50%;
+    }
+}
