@@ -14,11 +14,11 @@
     right: 30px;
     z-index: 100;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
         font-size: 100px;
     }
 
-    @media (min-width: 1600px) {
+    @media (width >= 1600px) {
         font-size: 200px;
     }
 

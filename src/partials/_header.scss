@@ -41,8 +41,7 @@ header {
         background-position: 50% 50%;
         background-repeat: none;
         background-size: cover;
-        /*border-radius: 2000px;*/
-        margin: 20px auto 30px auto;
+        margin: 20px auto 30px;
         max-width: 250px;
     }
 
@@ -51,7 +50,7 @@ header {
         width: 100%;
     }
 
-    @media (min-width: 960px) {
+    @media (width >= 960px) {
         background-position: 50% 50%;
     }
 }
