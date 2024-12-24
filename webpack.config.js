@@ -13,5 +13,13 @@ module.exports = {
         'imagesloaded': 'imagesloaded',
         'infinite-scroll': 'infinite-scroll'
       }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        }
+      ]
     }
 };
