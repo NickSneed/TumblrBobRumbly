@@ -7,6 +7,8 @@ function attachListener() {
     // Add a click listener to each element
     elements.forEach(element => {
         element.addEventListener('click', (event) => {
+
+            event.preventDefault();
             
             var p = event.target.parentElement;
             var children = Array.from(p.children);
@@ -29,6 +31,10 @@ function attachListener() {
             // Open Tumblr lightbox
             if (typeof Tumblr.Lightbox !== "undefined") {
                 Tumblr.Lightbox.init(imgArr, x);
+            } else {
+                if (document.body.classList.contains('page-index')) {
+                    window.location = p.getAttribute('href');
+                }
             }
         });
     });
