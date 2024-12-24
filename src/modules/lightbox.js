@@ -2,27 +2,26 @@
 
 function attachListener() {
     // Get all elements with the class "my-class"
-    const elements = document.querySelectorAll('.show-lightbox');
+    const lightboxBtnEls = document.querySelectorAll('.show-lightbox');
 
     // Add a click listener to each element
-    elements.forEach(element => {
+    lightboxBtnEls.forEach(lightboxBtnEl => {
 
-        if (element.dataset.lightbox === 'initialized') {
+        // If already initialized, return
+        if (lightboxBtnEl.dataset.lightbox === 'initialized') {
             return;
         }
 
-        element.addEventListener('click', (event) => {
-
-            console.log('click');
+        // Add click event listener
+        lightboxBtnEl.addEventListener('click', (event) => {
 
             event.preventDefault();
             
-            var p = event.currentTarget;
-
-            var children = Array.from(p.children);
+            var btnEl = event.currentTarget;
+            var children = Array.from(btnEl.children);
             var x = children.indexOf(event.target);
             var imgArr = [];
-            var images = p.querySelectorAll('img');
+            var images = btnEl.querySelectorAll('img');
 
             // Build array of images
             images.forEach(img => {
@@ -41,12 +40,12 @@ function attachListener() {
                 Tumblr.Lightbox.init(imgArr, x);
             } else {
                 if (document.body.classList.contains('page-index')) {
-                    window.location = p.getAttribute('href');
+                    window.location = btnEl.getAttribute('href');
                 }
             }
         });
         
-        element.setAttribute('data-lightbox', 'initialized');
+        lightboxBtnEl.setAttribute('data-lightbox', 'initialized');
     });
 }
 
