@@ -1,4 +1,5 @@
 @use 'colors.scss' as c;
+@use 'mediaqueries.scss' as m;
 
 .posts {
     margin: 0 auto;
@@ -124,7 +125,7 @@
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg);
 
-    @media (width >= 960px) {
+    @include m.for-medium {  
         display: block;
     }
 }

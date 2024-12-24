@@ -1,3 +1,5 @@
+@use 'mediaqueries.scss' as m;
+
 .grid-sizer,
 .gutter-sizer {
     list-style: none;
@@ -13,7 +15,7 @@
     width: 0;
 }
 
-@media (width >= 768px) {
+@include m.for-small {    
     .page-index
     .post,
     .grid-sizer {
@@ -25,7 +27,7 @@
     }
 }
 
-@media (width >= 1200px) {
+@include m.for-large {  
     .page-index .posts {
         padding: 5% 0 0;
         width: 90%;
@@ -45,7 +47,7 @@
     }
 }
 
-@media (width >= 1900px) {
+@include m.for-xlarge {  
     .page-index .posts {
         padding: 4% 0 0;
         width: 92%;
