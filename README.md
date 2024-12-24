@@ -3,6 +3,7 @@
 ## To do:
 1. change to em
 2. redesign header
+3. add animated down arrow
 
 Style lint rules:
 https://stylelint.io/user-guide/rules

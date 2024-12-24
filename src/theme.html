@@ -19,7 +19,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://static.tumblr.com/g82vxpi/G0vsp0eyl/styles.css" rel="stylesheet">
+    <link href="https://static.tumblr.com/g82vxpi/I5Ysp0hik/styles.css" rel="stylesheet">
 
     <style>
         .to-top-arrow {
@@ -67,7 +67,7 @@
                         {/block:Title} 
                         
                         {block:PermalinkPage} 
-                            <a href="/"  title="Back">
+                            <a href="/" class="btn" title="Back">
                                 &lt; Back
                             </a>
                         {/block:PermalinkPage} 
@@ -145,7 +145,7 @@
                         {/block:Link} 
                         
                         {block:IndexPage} 
-                            <a href="{Permalink}"  title="{lang:View high resolution}">View Post</a>
+                            <a href="{Permalink}" class="btn" title="{lang:View high resolution}">View Post</a>
                         {/block:IndexPage} 
                         
                         {block:Caption}
@@ -163,7 +163,7 @@
                         <div class="post-footer cf">
                             <div class="note-count">{NoteCount}</div>
                             {LikeButton color="black"} {ReblogButton color="black"}
-                            <a href="{Permalink}" class="time-ago">{timeAgo}</a>
+                            <a href="{Permalink}" class="float-r">{timeAgo}</a>
                         </div>
                     </li>
                 {/block:Posts}

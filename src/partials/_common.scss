@@ -97,8 +97,6 @@ iframe#youtube_iframe {
 }
 
 .txt-label-maker {
-    -ms-transform: rotate(-2deg);
-    -webkit-transform: rotate(-2deg);
     background: c.$black;
     color: c.$white;
     display: inline-block;
@@ -108,6 +106,8 @@ iframe#youtube_iframe {
     line-height: 1.8em;
     padding: 0 0.3em;
     transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
 }
 
 .btn {

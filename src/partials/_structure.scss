@@ -1,3 +1,4 @@
+@use 'colors.scss' as c;
 @use 'mediaqueries.scss' as m;
 
 .main-wrapper {
@@ -16,6 +17,8 @@
     position: fixed;
     right: 30px;
     z-index: 100;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: c.$white;
 
     @include m.for-small {  
         font-size: 100px;
@@ -29,6 +32,8 @@
 
     &:after {
         content: "^";
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: c.$white;
     }
 }
 
