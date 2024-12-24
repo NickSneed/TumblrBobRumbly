@@ -2,7 +2,6 @@
     "name": "tumblrbobrumbly",
     "version": "1.0.0",
     "main": "app.js",
-    "sasslintConfig": ".sasslintrc",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "cls && npx stylelint src/**/*.scss && npm run compile:sass && eslint src && npm run compile:js",
