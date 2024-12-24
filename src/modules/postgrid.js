@@ -3,20 +3,21 @@ const InfiniteScroll = require('infinite-scroll');
 const imagesLoaded = require('imagesloaded');
 
 function init() {
+    // Define Masonry grid
     let msnry = new Masonry('#posts', {
         itemSelector: '.post',
         columnWidth: '.grid-sizer',
         gutter: '.gutter-sizer',
         percentPosition: true,
         stagger: 30,
-        // nicer reveal transition
         visibleStyle: { transform: 'translateY(0)', opacity: 1 },
         hiddenStyle: { transform: 'translateY(100px)', opacity: 0 }
     });
 
-    // make imagesLoaded available for InfiniteScroll
+    // Make imagesLoaded available for InfiniteScroll
     InfiniteScroll.imagesLoaded = imagesLoaded;
 
+    // Initialzing InfiniteScroll
     let infScroll = new InfiniteScroll('#posts', {
         path: '#next-button',
         outlayer: msnry,
@@ -24,7 +25,10 @@ function init() {
         history: false,
         prefill: true,
         append: '.post'
+    }).loadNextPage().then( function(loaded) {
+        msnry.layout();
     });
+
 }
 
 export default init;

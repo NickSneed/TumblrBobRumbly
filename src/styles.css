@@ -10,6 +10,10 @@ body {
     padding: 0 0 60px 0;
 }
 
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
 a,
 a:visited {
     cursor: pointer;
@@ -106,7 +110,10 @@ img {
 }
 
 .to-top-arrow {
+    background: none;
+    border: none;
     bottom: 30px;
+    cursor: pointer;
     display: none;
     font-size: 70px;
     position: fixed;
