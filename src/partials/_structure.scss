@@ -5,7 +5,7 @@
 
 .to-top-arrow {
     background: none;
-    border: none;
+    border: 0;
     bottom: 30px;
     cursor: pointer;
     display: none;
@@ -17,11 +17,11 @@
     @media (min-width: 768px) {
         font-size: 100px;
     }
-    
+
     @media (min-width: 1600px) {
         font-size: 200px;
     }
-    
+
     &:after {
         content: "^";
     }

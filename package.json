@@ -2,11 +2,15 @@
     "name": "tumblrbobrumbly",
     "version": "1.0.0",
     "main": "app.js",
+    "sasslintConfig": ".sasslintrc",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "eslint src/ && npm run sass-prod && webpack",
-        "sass-watch": "sass --watch --update --style=expanded src/:dist/",
-        "sass-prod": "sass --no-source-map --style=compressed src/:dist/"
+        "build": "npm run lint:sass && npm run compile:sass && npm run lint:js && npm run compile:js",
+        "lint:sass": "sass-lint -v src/**/*.scss",
+        "lint:js": "eslint src/",
+        "compile:sass": "sass --no-source-map --style=compressed src/:dist/",
+        "compile:js": "webpack",
+        "watch:sass": "sass --watch --update --style=expanded src/:dist/"
     },
     "keywords": [],
     "author": "",
@@ -17,6 +21,7 @@
         "eslint": "^9.17.0",
         "globals": "^15.14.0",
         "sass": "^1.83.0",
+        "sass-lint": "^1.13.1",
         "webpack": "^5.97.1",
         "webpack-cli": "^5.1.4"
     },
