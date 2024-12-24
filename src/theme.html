@@ -19,7 +19,7 @@
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://static.tumblr.com/g82vxpi/2R8sp01p7/styles.css" rel="stylesheet">
+    <link href="https://static.tumblr.com/g82vxpi/qffsp0bc0/styles.css" rel="stylesheet">
 
     <style>
         body {
@@ -92,9 +92,9 @@
                     
                     {block:Photo}
                     {block:IndexPage} 
-                    <a href="{Permalink}"  title="{lang:View high resolution}">
-                        <img src="{PhotoURL-500}" class="show-lightbox photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
-                    </a> 
+                    <button class="show-lightbox" title="{lang:View high resolution}">
+                        <img src="{PhotoURL-500}" class="photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                    </button>
                     {/block:IndexPage}
                     {block:PermalinkPage} 
                     <a href="/"  title="Back">
@@ -115,15 +115,17 @@
                     {block:Photoset}
                     <div class="photo-set-wrapper cf" data-isloaded="false" data-setlayout="{PhotosetLayout}">
                         {block:Photos}
-                        <div class="photo-wrapper show-lightbox"><img src="{PhotoURL-500}" style="width: 100%;" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/></div>
+                        <button class="photo-wrapper show-lightbox">
+                            <img src="{PhotoURL-500}" style="width: 100%;" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                        </button>
                         {/block:Photos}
                     </div>
                     {/block:Photoset} 
                     
                     {block:Thumbnail}
-                    <a href="{Thumbnail-HighRes}"  title="{lang:View high resolution}">
-                        <img src="{Thumbnail-HighRes}" class="show-lightbox photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
-                    </a> 
+                    <button class="show-lightbox" title="{lang:View high resolution}">
+                        <img src="{Thumbnail-HighRes}" class="photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                    </button> 
                     <!--<img src="{Thumbnail-HighRes}" alt="{PhotoAlt}" class="photo-im2" /> -->
                     {/block:Thumbnail} 
                     
@@ -209,7 +211,7 @@
         </section>
     </section>
 
-	<script src="https://static.tumblr.com/g82vxpi/hNSsp01pg/main.js"></script>
+	<script src="https://static.tumblr.com/g82vxpi/rfqsp0az7/main.js"></script>
    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
