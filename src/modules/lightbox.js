@@ -38,10 +38,6 @@ function attachListener() {
             // Open Tumblr lightbox
             if (typeof Tumblr.Lightbox !== "undefined") {
                 Tumblr.Lightbox.init(imgArr, x);
-            } else {
-                if (document.body.classList.contains('page-index')) {
-                    window.location = btnEl.getAttribute('href');
-                }
             }
         });
         

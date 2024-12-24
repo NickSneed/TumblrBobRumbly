@@ -85,104 +85,111 @@
                 <li class="grid-sizer"></li>
                 <li class="gutter-sizer"></li>
                 {block:Posts}
-                <li class="post">
-                    {block:Title}
-                    <h3><a href="{Permalink}">{Title}</a></h3> 
-                    {/block:Title} 
-                    
-                    {block:Photo}
-                    {block:IndexPage} 
-                    <button class="show-lightbox" title="{lang:View high resolution}">
-                        <img src="{PhotoURL-500}" class="photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
-                    </button>
-                    {/block:IndexPage}
-                    {block:PermalinkPage} 
-                    <a href="/"  title="Back">
-                        &lt; Back
-                    </a>
-                    <a href="/"  title="Back">
-                        <img src="{PhotoURL-HighRes}" class="photo-img" alt="{PhotoAlt}"/>
-                    </a>
-                    {/block:PermalinkPage}
-                    {/block:Photo} 
-                    
-                    {block:Panorama} 
-                    {LinkOpenTag}
-                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="photo-img" /> 
-                    {LinkCloseTag} 
-                    {/block:Panorama} 
-                    
-                    {block:Photoset}
-                    <div class="photo-set-wrapper cf" data-isloaded="false" data-setlayout="{PhotosetLayout}">
-                        {block:Photos}
-                        <button class="photo-wrapper show-lightbox">
-                            <img src="{PhotoURL-500}" style="width: 100%;" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
-                        </button>
-                        {/block:Photos}
-                    </div>
-                    {/block:Photoset} 
-                    
-                    {block:Thumbnail}
-                    <button class="show-lightbox" title="{lang:View high resolution}">
-                        <img src="{Thumbnail-HighRes}" class="photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
-                    </button> 
-                    <!--<img src="{Thumbnail-HighRes}" alt="{PhotoAlt}" class="photo-im2" /> -->
-                    {/block:Thumbnail} 
-                    
-                    {block:Video}
-                    <div class="video-wrapper">{Video-700}</div>
-                    {/block:Video} 
-                    
-                    {block:Audio}
-                    {AudioPlayerBlack} 
-                    {/block:Audio} 
-                    
-                    {block:Text}
-                    <div class="text-padding">{Body}</div>
-                    {/block:Text}
-                    
-                    {block:Quote} "{Quote}" {block:Source}
-                    <div class="source">{Source}</div>
-                    {/block:Source} 
-                    {/block:Quote} 
-                    
-                    {block:Chat}
-                    <ul class="chat">
-                        {block:Lines}
-                        <li class="{Alt} user-{UserNumber}">
-                            {block:Label}
-                            <span class="label">{Label}</span> {/block:Label}{Line}
-                        </li>
-                        {/block:Lines}
-                    </ul>
-                    {/block:Chat} 
-                    
-                    {block:Author} 
-                    by: {Author}<br> 
-                    {/block:Author} 
-                    
-                    {block:Link}
-                    <a href="{URL}" class="link" {Target}>{Name}</a> 
-                    {/block:Link} 
-                    
-                    {block:Caption}
-                    <div class="caption">{Caption}</div>
-                    {/block:Caption} 
-                    <div class="tags">
-                        {block:HasTags} {block:Tags}#
-                        <a href="{TagURL}">{Tag}</a>{/block:Tags} {/block:HasTags}
-                    </div>
-                    {block:PostNotes}
-                    <div class="post-notes">
-                        {PostNotes-16}
-                    </div>
-                    {/block:PostNotes}
-                    <div class="post-footer cf">
-                        <div class="note-count">{NoteCount}</div>
-                        {LikeButton color="black"} {ReblogButton color="black"}
-                        <a href="{Permalink}" class="time-ago">{timeAgo}</a>
-                    </div>
-                </li>
+                    <li class="post">
+                        {block:Title}
+                        <h3><a href="{Permalink}">{Title}</a></h3> 
+                        {/block:Title} 
+                        
+                        {block:PermalinkPage} 
+                            <a href="/"  title="Back">
+                                &lt; Back
+                            </a>
+                        {/block:PermalinkPage} 
+                        
+                        {block:Photo}
+                        {block:IndexPage} 
+                            <button class="show-lightbox" title="{lang:View high resolution}">
+                                <img src="{PhotoURL-500}" class="photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                            </button>
+                        {/block:IndexPage}
+                        {block:PermalinkPage} 
+                            <a href="/"  title="Back">
+                                <img src="{PhotoURL-HighRes}" class="photo-img" alt="{PhotoAlt}"/>
+                            </a>
+                        {/block:PermalinkPage}
+                        {/block:Photo} 
+                        
+                        {block:Panorama} 
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="photo-img" /> 
+                        {LinkCloseTag} 
+                        {/block:Panorama} 
+                        
+                        {block:Photoset}
+                            <div class="photo-set-wrapper cf" data-isloaded="false" data-setlayout="{PhotosetLayout}">
+                                {block:Photos}
+                                <button class="photo-wrapper show-lightbox">
+                                    <img src="{PhotoURL-500}" style="width: 100%;" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                                </button>
+                                {/block:Photos}
+                            </div>
+                        {/block:Photoset} 
+                        
+                        {block:Thumbnail}
+                            <button class="show-lightbox" title="{lang:View high resolution}">
+                                <img src="{Thumbnail-HighRes}" class="photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                            </button> 
+                        <!--<img src="{Thumbnail-HighRes}" alt="{PhotoAlt}" class="photo-im2" /> -->
+                        {/block:Thumbnail} 
+                        
+                        {block:Video}
+                            <div class="video-wrapper">{Video-700}</div>
+                        {/block:Video} 
+                        
+                        {block:Audio}
+                            {AudioPlayerBlack} 
+                        {/block:Audio} 
+                        
+                        {block:Text}
+                            <div class="text-padding">{Body}</div>
+                        {/block:Text}
+                        
+                        {block:Quote} "{Quote}" {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source} 
+                        {/block:Quote} 
+                        
+                        {block:Chat}
+                            <ul class="chat">
+                                {block:Lines}
+                                <li class="{Alt} user-{UserNumber}">
+                                    {block:Label}
+                                    <span class="label">{Label}</span> {/block:Label}{Line}
+                                </li>
+                                {/block:Lines}
+                            </ul>
+                        {/block:Chat} 
+                        
+                        {block:Author} 
+                            by: {Author}<br> 
+                        {/block:Author} 
+                        
+                        {block:Link}
+                            <a href="{URL}" class="link" {Target}>{Name}</a> 
+                        {/block:Link} 
+                        
+                        {block:IndexPage} 
+                            <a href="{Permalink}"  title="{lang:View high resolution}">View Post</a>
+                        {/block:IndexPage} 
+                        
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption} 
+                            <div class="tags">
+                                {block:HasTags} {block:Tags}#
+                                <a href="{TagURL}">{Tag}</a>{/block:Tags} {/block:HasTags}
+                            </div>
+                        {block:PostNotes}
+                            <div class="post-notes">
+                                {PostNotes-16}
+                            </div>
+                        {/block:PostNotes}
+                        <div class="post-footer cf">
+                            <div class="note-count">{NoteCount}</div>
+                            {LikeButton color="black"} {ReblogButton color="black"}
+                            <a href="{Permalink}" class="time-ago">{timeAgo}</a>
+                        </div>
+                    </li>
                 {/block:Posts}
             </ul>
             <footer>
@@ -211,7 +218,7 @@
         </section>
     </section>
 
-	<script src="https://static.tumblr.com/g82vxpi/wtBsp0bq0/main.js"></script>
+	<script src="https://static.tumblr.com/g82vxpi/FRAsp0cz0/main.js"></script>
    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
