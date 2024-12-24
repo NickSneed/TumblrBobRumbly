@@ -7,6 +7,7 @@ html {
 
 body {
     background: c.$lightgray;
+    color: c.$black;
     font: 400 13px/1.8em 'Varela Round', sans-serif;
     margin: 0;
     padding: 0 0 60px;
@@ -21,6 +22,7 @@ button {
 
 a,
 a:visited {
+    color: c.$red;
     cursor: pointer;
     text-decoration: none;
 }
@@ -40,6 +42,15 @@ blockquote {
 ul,
 ol {
     padding-left: 30px;
+}
+
+h1 a,
+h1 a:visited,
+h2 a,
+h2 a:visited,
+h3 a,
+h3 a:visited {
+    color: c.$black;
 }
 
 h1,
