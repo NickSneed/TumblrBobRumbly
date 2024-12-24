@@ -16,7 +16,6 @@ function attachListener() {
             var x = children.indexOf(event.target);
             var imgArr = [];
             var images = p.querySelectorAll('img');
-            console.log(images);
 
             // Build array of images
             images.forEach(img => {
@@ -29,8 +28,6 @@ function attachListener() {
                     });
                 }
             });
-
-            console.log(imgArr);
 
             // Open Tumblr lightbox
             if (typeof Tumblr.Lightbox !== "undefined") {
