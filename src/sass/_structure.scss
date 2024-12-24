@@ -19,6 +19,18 @@
     position: fixed;
     right: 30px;
     z-index: 100;
+
+    @media (min-width: 768px) {
+        font-size: 100px;
+    }
+    
+    @media (min-width: 1600px) {
+        font-size: 200px;
+    }
+    
+    &:after {
+        content: "^";
+    }
 }
 
 .to-top-arrow:after {
@@ -49,22 +61,4 @@
 footer {
     padding: 50px 20px;
     text-align: center;
-}
-
-@media (min-width: 768px) {
-    .to-top-arrow {
-        font-size: 100px;
-    }
-}
-
-@media (min-width: 1600px) {
-    .to-top-arrow {
-        font-size: 200px;
-    }
-}
-
-@media (max-width: 959px) {
-    #sidebar.column.left {
-        position: static !important;
-    }
 }

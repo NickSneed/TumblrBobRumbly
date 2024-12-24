@@ -1,7 +1,3 @@
-
-/* posts
------------------------------------------------------------------------ */
-
 .posts {
     margin: 0 auto;
     padding: 6% 0 0;
@@ -20,21 +16,6 @@
     margin: 0 0 6%;
     position: relative;
     width: 100%;
-}
-
-.grid-sizer,
-.gutter-sizer {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.grid-sizer {
-    width: 100%;
-}
-
-.gutter-sizer {
-    width: 0;
 }
 
 .post img {
@@ -86,79 +67,31 @@
     margin-right: 10px;
 }
 
-@media (min-width: 768px) {
-
-    .page-index .post,
-    .grid-sizer {
-        width: 47%;
-    }
-
-    .gutter-sizer {
-        width: 6%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .page-index .posts {
-        padding: 5% 0 0;
-        width: 90%;
-    }
-
-    .page-index .post,
-    .grid-sizer {
-        width: 30%;
-    }
-
-    .gutter-sizer {
-        width: 5%;
-    }
-
-    .page-index .post {
-        margin: 0 0 5%;
-    }
-}
-
-@media (min-width: 1900px) {
-    .page-index .posts {
-        padding: 4% 0 0;
-        width: 92%;
-    }
-
-    .page-index .post,
-    .grid-sizer {
-        width: 22%;
-    }
-
-    .gutter-sizer {
-        width: 4%;
-    }
-
-    .page-index .post {
-        margin: 0 0 4%;
-    }
-}
-
-
-/* text
------------------------------------------------------------------------ */
-
 .text-padding {
     padding-bottom: 40px;
-}
 
-.text-padding img {
-    height: auto !important;
-    margin: 20px 0;
-    width: 100%;
+    img {
+        height: auto !important;
+        margin: 20px 0;
+        width: 100%;
+    }
 }
-
-/* photoset
------------------------------------------------------------------------ */
 
 .photo-set-wrapper {
     background: #000;
     margin-bottom: 15px;
     width: 100%;
+
+    .photo-wrapper {
+        float: left;
+        /*padding: 0 10px 20px 10px;*/
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
 }
 
 .photo-set-wrapper,
@@ -168,34 +101,20 @@
     *width: 100%;
 }
 
-.photo-set-wrapper .photo-wrapper {
-    float: left;
-    /*padding: 0 10px 20px 10px;*/
-    width: 100%;
-}
-
-.photo-set-wrapper img {
-    display: block;
-    width: 100%;
-}
-
-/* video
------------------------------------------------------------------------ */
-
 .video-wrapper {
     height: 0;
     padding-bottom: 56.25%;
     position: relative;
     margin-bottom: 15px;
     width: 100%;
-}
 
-.video-wrapper iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 }
 
 #twitter-widget {
