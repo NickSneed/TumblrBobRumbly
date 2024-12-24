@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+    <title>{Title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="color:Background" content="#efefef" />
+    <meta name="color:Text" content="#000" />
+    <meta name="color:Icons" content="#000" />
+    <meta name="color:Headings" content="#fff" />
+    <meta name="color:Links" content="#ff0000" />
+    <meta name="text:Tagline" content="" />
+    <meta name="image:Logo" content="{HeaderImage}" />
+    <meta name="image:Background Small" content="{BackImageSmall}" />
+    <meta name="image:Background" content="{BackImage}" /> {block:Description}
+    <meta name="description" content="{MetaDescription}" /> {/block:Description}
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <style>
+        body {
+            color: {color:Text} !important;
+        }
+        
+        a,
+        a:visited {
+            color: {color:Links} !important;
+        }
+        
+        h1 a,
+        h1 a:visited,
+        h3 a,
+        h3 a:visited {
+            color: {color:Text} !important;
+        }
+        
+        h2 {
+            color: {color:Headings} !important;
+        }
+
+        .to-top-arrow {
+            color: {color:Icons} !important;
+        }
+
+        .tags {
+            color: { color: Highlight} !important;
+        }
+       
+        header {
+            background-image: url('{image:Background Small}') !important;
+            background-color: {color:Background} !important;
+        }
+     
+        @media (min-width: 960px) {
+            header {
+                background-image: url('{image:Background}') !important;
+            }
+        }
+
+        {CustomCSS}
+    </style>
+</head>
+
+<body class="{block:IndexPage}page-{currentPage} page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage} ">
+    <button id="to-top" class="to-top-arrow"></button>
+    <section class="main-wrapper cf">
+        <header>
+            <section>
+                <img src="{image:Logo}"/>
+                <h1><a href="/">{Title}</a></h1>
+                <h2>{text:Tagline}</h2> {block:Description}
+                <p>{Description}</p>
+                {/block:Description}
+                <a href="{RSS}" {Target}>RSS</a>
+            </section>
+        </header>
+        <section>
+            <ul class="posts" id="posts">
+                <li class="grid-sizer"></li>
+                <li class="gutter-sizer"></li>
+                {block:Posts}
+                <li class="post">
+                    {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3> 
+                    {/block:Title} 
+                    
+                    {block:Photo}
+                    {block:IndexPage} 
+                    <a href="{Permalink}"  title="{lang:View high resolution}">
+                        <img src="{PhotoURL-500}" class="show-lightbox photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                    </a> 
+                    {/block:IndexPage}
+                    {block:PermalinkPage} 
+                    <a href="/"  title="Back">
+                        <img src="{PhotoURL-HighRes}" class="photo-img" alt="{PhotoAlt}"/>
+                    </a>
+                    {/block:PermalinkPage}
+                    {/block:Photo} 
+                    
+                    {block:Panorama} 
+                    {LinkOpenTag}
+                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="photo-img" /> 
+                    {LinkCloseTag} 
+                    {/block:Panorama} 
+                    
+                    {block:Photoset}
+                    <div class="photo-set-wrapper cf" data-isloaded="false" data-setlayout="{PhotosetLayout}">
+                        {block:Photos}
+                        <div class="photo-wrapper show-lightbox"><img src="{PhotoURL-500}" style="width: 100%;" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/></div>
+                        {/block:Photos}
+                    </div>
+                    {/block:Photoset} 
+                    
+                    {block:Thumbnail}
+                    <a href="{Thumbnail-HighRes}"  title="{lang:View high resolution}">
+                        <img src="{Thumbnail-HighRes}" class="show-lightbox photo-img" alt="{PhotoAlt}" data-hirez="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"/>
+                    </a> 
+                    <!--<img src="{Thumbnail-HighRes}" alt="{PhotoAlt}" class="photo-im2" /> -->
+                    {/block:Thumbnail} 
+                    
+                    {block:Video}
+                    <div class="video-wrapper">{Video-700}</div>
+                    {/block:Video} 
+                    
+                    {block:Audio}
+                    {AudioPlayerBlack} 
+                    {/block:Audio} 
+                    
+                    {block:Text}
+                    <div class="text-padding">{Body}</div>
+                    {/block:Text}
+                    
+                    {block:Quote} "{Quote}" {block:Source}
+                    <div class="source">{Source}</div>
+                    {/block:Source} 
+                    {/block:Quote} 
+                    
+                    {block:Chat}
+                    <ul class="chat">
+                        {block:Lines}
+                        <li class="{Alt} user-{UserNumber}">
+                            {block:Label}
+                            <span class="label">{Label}</span> {/block:Label}{Line}
+                        </li>
+                        {/block:Lines}
+                    </ul>
+                    {/block:Chat} 
+                    
+                    {block:Author} 
+                    by: {Author}<br> 
+                    {/block:Author} 
+                    
+                    {block:Link}
+                    <a href="{URL}" class="link" {Target}>{Name}</a> 
+                    {/block:Link} 
+                    
+                    {block:Caption}
+                    <div class="caption">{Caption}</div>
+                    {/block:Caption} 
+                    <div class="tags">
+                        {block:HasTags} {block:Tags}#
+                        <a href="{TagURL}">{Tag}</a>{/block:Tags} {/block:HasTags}
+                    </div>
+                    {block:PostNotes}
+                    <div class="post-notes">
+                        {PostNotes-16}
+                    </div>
+                    {/block:PostNotes}
+                    <div class="post-footer cf">
+                        <div class="note-count">{NoteCount}</div>
+                        {LikeButton color="black"} {ReblogButton color="black"}
+                        <a href="{Permalink}" class="time-ago">{timeAgo}</a>
+                    </div>
+                </li>
+                {/block:Posts}
+            </ul>
+            <footer>
+                {block:Pagination}
+                <div class="page-wrapper" id="page-nav">
+                    {block:PreviousPage}
+                        <a href="{PreviousPage}"><span class="icon-arrow-left icon-page"></span></a> 
+                    {/block:PreviousPage} 
+                    {block:JumpPagination length="5"} 
+                        {block:currentPage}
+                            <span class="current-page">{PageNumber}</span> 
+                        {/block:currentPage} 
+                        {block:JumpPage}
+                            <a class="jump-page" href="{URL}">{PageNumber}</a> 
+                        {/block:JumpPage} 
+                    {/block:JumpPagination} 
+                    {block:NextPage}
+                        <a href="{NextPage}" id="next-button"><span class="icon-arrow-right icon-page"></span></a>
+                    {/block:NextPage}
+                </div>
+                {/block:Pagination}
+                {block:IndexPage} 
+                <div class="page-load-status">
+                    <p class="infinite-scroll-request">Loading...</p>
+                    <p class="infinite-scroll-last">End of content</p>
+                    <p class="infinite-scroll-error">No more pages to load</p>
+                </div>
+                {/block:IndexPage}
+                <div class="footer-copy">&copy; {CopyrightYears}</div>
+            </footer>
+        </section>
+    </section>
+
+	<script src="https://static.tumblr.com/g82vxpi/I8Wsoz9dr/main.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
