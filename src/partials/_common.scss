@@ -92,6 +92,10 @@ iframe#youtube_iframe {
     clear: both;
 }
 
+.float-r {
+    float: right;
+}
+
 .txt-label-maker {
     -ms-transform: rotate(-2deg);
     -webkit-transform: rotate(-2deg);
@@ -104,4 +108,19 @@ iframe#youtube_iframe {
     line-height: 1.8em;
     padding: 0 0.3em;
     transform: rotate(-2deg);
+}
+
+.btn {
+    background: c.$black;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 0 1em;
+    padding: 0 0.5em;
+    color: c.$white;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:visited {
+        color: c.$gray;
+    }
 }

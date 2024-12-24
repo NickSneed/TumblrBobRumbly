@@ -16,8 +16,7 @@
 }
 
 @include m.for-small {    
-    .page-index
-    .post,
+    .page-index .post,
     .grid-sizer {
         width: 47%;
     }
