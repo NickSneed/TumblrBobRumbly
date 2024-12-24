@@ -1,4 +1,4 @@
 # BobRumbly
 
 ## To do:
-1. Add modal for posts
+1. Wire up lightbox code
