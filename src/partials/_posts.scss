@@ -92,13 +92,13 @@
         display: block;
         width: 100%;
     }
-}
 
-.photo-set-wrapper,
-.photo-set-wrapper iframe {
-    min-width: 100%;
-    width: 100%;
-    *width: 100%;
+    &,
+    iframe {
+        min-width: 100%;
+        width: 100%;
+        *width: 100%;
+    }
 }
 
 .video-wrapper {
@@ -124,10 +124,8 @@
     -webkit-transform: rotate(-2deg);
     /* Chrome, Safari, Opera */
     transform: rotate(-2deg);
-}
 
-@media (min-width: 960px) {
-    #twitter-widget {
+    @media (min-width: 960px) {
         display: block;
     }
 }
