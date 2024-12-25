@@ -2,36 +2,41 @@ import Masonry from "masonry-layout";
 import InfiniteScroll from "infinite-scroll";
 import imagesLoaded from "imagesloaded";
 
-const postsSelector = '.js-posts';
-const postSelector = '.js-post';
+const postsSel = '.js-posts';
+const postSel = '.js-post';
+const gridSizerSel = '.js-grid-sizer';
+const gutterSizerSel = '.js-gutter-sizer';
+const pageLoadStatusSel = '.js-page-load-status';
 
 function init() {
     // Define Masonry grid
-    let msnry = new Masonry(postsSelector, {
-        itemSelector: postSelector,
-        columnWidth: '.grid-sizer',
-        gutter: '.gutter-sizer',
+    const masonryOptions = {
+        itemSelector: postSel,
+        columnWidth: gridSizerSel,
+        gutter: gutterSizerSel,
         percentPosition: true,
         stagger: 30,
         visibleStyle: { transform: 'translateY(0)', opacity: 1 },
         hiddenStyle: { transform: 'translateY(100px)', opacity: 0 }
-    });
+    };
+    let msnry = new Masonry(postsSel, masonryOptions);
 
     // Make imagesLoaded available for InfiniteScroll
     InfiniteScroll.imagesLoaded = imagesLoaded;
 
     // Initializing InfiniteScroll
-    new InfiniteScroll(postsSelector, {
+    const infiniteScrollOptions = {
         path: '#next-button',
         outlayer: msnry,
-        status: '.page-load-status',
+        status: pageLoadStatusSel,
         history: false,
         prefill: true,
-        append: postSelector
-    });
+        append: postSel
+    };
+    new InfiniteScroll(postsSel, infiniteScrollOptions);
 
     // Trigger layout after initial images load
-    imagesLoaded(document.querySelector(postsSelector), function () {
+    imagesLoaded(document.querySelector(postsSel), function () {
         msnry.layout();
     });
 

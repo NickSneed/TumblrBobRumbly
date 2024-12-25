@@ -1,7 +1,6 @@
 /* global Tumblr */
 
 function attachListeners() {
-    // Get all elements with the class "my-class"
     const lightboxBtnEls = document.querySelectorAll('.js-show-lightbox');
 
     // Add a click listener to each element

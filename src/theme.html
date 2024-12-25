@@ -42,7 +42,7 @@
 </head>
 
 <body class="{block:IndexPage}page-{currentPage} page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage} ">
-    <button id="to-top" class="to-top-arrow"></button>
+    <button class="to-top-arrow js-to-top"></button>
     <section class="main-wrapper cf">
         {block:IndexPage}
             <header>
@@ -57,8 +57,8 @@
         {/block:IndexPage}
         <section>
             <ul class="posts js-posts">
-                <li class="grid-sizer"></li>
-                <li class="gutter-sizer"></li>
+                <li class="grid-sizer js-grid-sizer"></li>
+                <li class="gutter-sizer js-gutter-sizer"></li>
                 {block:Posts}
                     <li class="post js-post">
                         {block:Title}
@@ -176,7 +176,7 @@
                 </div>
                 {/block:Pagination}
                 {block:IndexPage} 
-                <div class="page-load-status">
+                <div class="js-page-load-status">
                     <p class="infinite-scroll-request">
                         <span class="txt-label-maker">Loading...</span>
                     </p>
@@ -194,7 +194,7 @@
         </section>
     </section>
 
-	<script src="https://static.tumblr.com/g82vxpi/Y5vsp145b/main.js"></script>
+	<script src="https://static.tumblr.com/g82vxpi/Z5Dsp1553/main.js"></script>
    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

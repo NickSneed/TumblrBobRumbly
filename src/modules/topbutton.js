@@ -1,4 +1,4 @@
-const scrollToTopButton = document.getElementById('to-top');
+const scrollToTopButton = document.querySelector('.js-to-top');
 
 // Smooth scrolling to top
 function scrollToTop() {
