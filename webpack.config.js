@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/app.js',
+    entry: {
+        app: './src/app.js',
+        lagtest: './src/lagtest.js' // Add more entry points as needed
+    },
     mode: 'production',
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
     resolve: {
