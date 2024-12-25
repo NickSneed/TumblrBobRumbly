@@ -11,7 +11,8 @@
         "lint": "cls && npx stylelint src/**/*.scss && eslint src/",
         "compile:sass": "sass --no-source-map --style=compressed src/:dist/",
         "compile:js": "webpack",
-        "watch:sass": "sass --watch --update --style=expanded src/:dist/"
+        "watch:sass": "sass --watch --update --style=expanded src/:dist/",
+        "proddeploy": "git checkout main && git merge dev && git checkout dev"
     },
     "keywords": [],
     "author": "",
