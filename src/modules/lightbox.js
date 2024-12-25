@@ -1,6 +1,7 @@
 function attachListeners() {
     const lightboxBtnEls = document.querySelectorAll('.js-show-lightbox');
 
+    
     // Add a click listener to each element
     lightboxBtnEls.forEach(lightboxBtnEl => {
 
