@@ -7,6 +7,8 @@
         "selector-pseudo-element-colon-notation": "single",
         "property-no-vendor-prefix": null,
         "no-descending-specificity": null,
-        "color-hex-length": null
+        "color-hex-length": null,
+        "alpha-value-notation": "number",
+        "color-function-notation": null
     }
 }
