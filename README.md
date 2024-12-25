@@ -8,6 +8,7 @@
 5. clean up template
 6. add text shadow to label text
 7. add google fonts to sass
+8. add command to lint sass and js
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
