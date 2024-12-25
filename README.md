@@ -5,6 +5,7 @@
 2. redesign header
 3. add animated down arrow
 4. fix lag test
+5. clean up template
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
