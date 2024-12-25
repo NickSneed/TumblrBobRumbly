@@ -6,6 +6,7 @@
 3. add animated down arrow
 4. fix lag test
 5. clean up template
+6. add text shadow to label text
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
