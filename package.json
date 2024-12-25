@@ -4,7 +4,7 @@
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "cls npx stylelint src/**/*.scss && npm run compile:sass && eslint src && npm run compile:js",
+        "build": "cls && npx stylelint src/**/*.scss && npm run compile:sass && eslint src && npm run compile:js",
         "prodbuild": "npm run compile:sass && npm run compile:js",
         "lint:sass": "cls && npx stylelint src/**/*.scss",
         "lint:js": "cls && eslint src/",
