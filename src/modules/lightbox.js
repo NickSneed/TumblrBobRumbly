@@ -1,5 +1,3 @@
-/* global Tumblr */
-
 function attachListeners() {
     const lightboxBtnEls = document.querySelectorAll('.js-show-lightbox');
 
