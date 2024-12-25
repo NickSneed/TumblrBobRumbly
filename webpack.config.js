@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        app: './src/app.js',
-        lagtest: './src/lagtest.js' // Add more entry points as needed
+        app: './src/app.js'
     },
     mode: 'production',
     output: {
