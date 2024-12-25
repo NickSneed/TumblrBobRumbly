@@ -5,14 +5,14 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "cls && npx stylelint src/**/*.scss && npm run compile:sass && eslint src && npm run compile:js",
-        "prodbuild": "npm run compile:sass && npm run compile:js",
         "lint:sass": "cls && npx stylelint src/**/*.scss",
         "lint:js": "cls && eslint src/",
         "lint": "cls && npx stylelint src/**/*.scss && eslint src/",
         "compile:sass": "sass --no-source-map --style=compressed src/:dist/",
         "compile:js": "webpack",
         "watch:sass": "sass --watch --update --style=expanded src/:dist/",
-        "proddeploy": "git checkout main && git merge dev && git push && git checkout dev"
+        "prod:build": "npm run compile:sass && npm run compile:js",
+        "prod:deploy": "git checkout main && git merge dev && git push && git checkout dev"
     },
     "keywords": [],
     "author": "",
