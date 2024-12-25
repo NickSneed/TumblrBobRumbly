@@ -1,0 +1,21 @@
+/* 
+Classes used to apply specific styles
+*/
+
+.d-block {
+    display: block;
+}
+
+.cf:before,
+.cf:after {
+    content: ' ';
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.float-r {
+    float: right;
+}

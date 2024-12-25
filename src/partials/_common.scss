@@ -1,99 +1,11 @@
+/* 
+Commonly used styling
+*/
+
 @use 'colors.scss' as c;
-
-*,
-html {
-    scroll-behavior: smooth !important;
-}
-
-body {
-    background: c.$lightgray;
-    color: c.$black;
-    font: 400 13px/1.8em 'Varela Round', sans-serif;
-    margin: 0;
-    padding: 0 0 60px;
-}
-
-button {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Varela Round', sans-serif;
-}
-
-a,
-a:visited {
-    color: c.$red;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-div,
-h1,
-h2,
-h3,
-blockquote {
-    border: 0;
-    box-sizing: border-box;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-}
-
-ul,
-ol {
-    padding-left: 30px;
-}
-
-h1 a,
-h1 a:visited,
-h2 a,
-h2 a:visited,
-h3 a,
-h3 a:visited {
-    color: c.$black;
-}
-
-h1,
-h2,
-h3 {
-    letter-spacing: -0.03em;
-}
-
-h3 {
-    border-bottom: 1px dotted c.$gray;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.2em;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-}
-
-p {
-    font-weight: 400;
-    margin: 0 0 10px;
-}
-
-img {
-    display: block;
-    margin: 0;
-}
 
 iframe#youtube_iframe {
     width: 100% !important;
-}
-
-.cf:before,
-.cf:after {
-    content: ' ';
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.float-r {
-    float: right;
 }
 
 .txt-label-maker {

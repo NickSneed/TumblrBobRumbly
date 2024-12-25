@@ -2,7 +2,7 @@
 
 function attachListeners() {
     // Get all elements with the class "my-class"
-    const lightboxBtnEls = document.querySelectorAll('.show-lightbox');
+    const lightboxBtnEls = document.querySelectorAll('.js-show-lightbox');
 
     // Add a click listener to each element
     lightboxBtnEls.forEach(lightboxBtnEl => {
@@ -48,7 +48,7 @@ function attachListeners() {
 
 function mutationInit() {
     // Add a MutationObserver to the #posts element
-    const postsEl = document.querySelector('#posts');
+    const postsEl = document.querySelector('.js-posts');
     const observer = new MutationObserver((mutationsList) => {
 
         // Attach listener to each new element

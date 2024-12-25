@@ -1,3 +1,7 @@
+/* 
+Media query mixins
+*/
+
 @mixin for-small {
     @media (width >= 768px) {
         @content;

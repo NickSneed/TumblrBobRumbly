@@ -1,3 +1,7 @@
+/*
+Styles for the posts
+*/
+
 @use 'colors.scss' as c;
 @use 'mediaqueries.scss' as m;
 
@@ -19,18 +23,10 @@
     margin: 0 0 6%;
     position: relative;
     width: 100%;
-
-    .show-lightbox {
-        display: block;
-    }
 }
 
 .post img {
     background: c.$white;
-}
-
-.show-lightbox {
-    cursor: pointer;
 }
 
 .photo-img {
