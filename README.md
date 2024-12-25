@@ -7,6 +7,7 @@
 4. fix lag test
 5. clean up template
 6. add text shadow to label text
+7. add google fonts to sass
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
