@@ -4,7 +4,7 @@ const scrollToTopButton = document.getElementById('to-top');
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Add smooth animation
+        behavior: 'smooth'
     });
 }
 
@@ -23,7 +23,7 @@ function init() {
         // Event listener for button click
         scrollToTopButton.addEventListener('click', scrollToTop);
 
-        // Show button when scrolled 500px down
+        // Show button when scrolled down
         window.addEventListener('scroll', () => {
             setToTopDisplay();
         });

@@ -1,6 +1,6 @@
 /* global Tumblr */
 
-function attachListener() {
+function attachListeners() {
     // Get all elements with the class "my-class"
     const lightboxBtnEls = document.querySelectorAll('.show-lightbox');
 
@@ -16,58 +16,64 @@ function attachListener() {
         lightboxBtnEl.addEventListener('click', (event) => {
 
             event.preventDefault();
-            
-            var btnEl = event.currentTarget;
-            var children = Array.from(btnEl.children);
-            var x = children.indexOf(event.target);
-            var imgArr = [];
-            var images = btnEl.querySelectorAll('img');
+
+            const btnEl = event.currentTarget;
+            const children = Array.from(btnEl.children);
+            const x = children.indexOf(event.target);
+            const imgArr = [];
+            const images = btnEl.querySelectorAll('img');
 
             // Build array of images
             images.forEach(img => {
-                if (img && img.dataset) {
+                if (img?.dataset) {
+                    const { height, width, hirez } = img.dataset;
                     imgArr.push({
-                        height: img.dataset.height,
-                        width: img.dataset.width,
+                        height,
+                        width,
                         low_res: img.getAttribute('src'),
-                        high_res: img.dataset.hirez
+                        high_res: hirez
                     });
                 }
             });
 
             // Open Tumblr lightbox
-            if (typeof Tumblr.Lightbox !== "undefined") {
+            if (typeof Tumblr !== "undefined" && typeof Tumblr.Lightbox !== "undefined") {
                 Tumblr.Lightbox.init(imgArr, x);
             }
         });
-        
+
         lightboxBtnEl.setAttribute('data-lightbox', 'initialized');
     });
 }
 
-function init() {
-
-    attachListener();
-
+function mutationInit() {
     // Add a MutationObserver to the #posts element
-    const postsElement = document.querySelector('#posts');
+    const postsEl = document.querySelector('#posts');
     const observer = new MutationObserver((mutationsList) => {
 
         // Attach listener to each new element
         for (let mutation of mutationsList) {
             mutation.addedNodes.forEach(node => {
                 if (node.nodeType === 1) {
-                    attachListener(node);
+                    attachListeners(node);
                 }
             });
         }
     });
 
     // Configuration of the observer:
-    const config = { childList: true, subtree: true };
+    const config = {
+        childList: true,
+        subtree: true
+    };
 
     // Start observing the target node for configured mutations
-    observer.observe(postsElement, config);
+    observer.observe(postsEl, config);
+}
+
+function init() {
+    attachListeners();
+    mutationInit();
 }
 
 export default init;
