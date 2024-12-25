@@ -62,7 +62,7 @@
                 {block:Posts}
                     <li class="post js-post">
                         {block:Title}
-                        <h3><a href="{Permalink}">{Title}</a></h3> 
+                            <h3><a href="{Permalink}">{Title}</a></h3> 
                         {/block:Title} 
                         
                         {block:PermalinkPage} 
@@ -143,9 +143,9 @@
                             <a href="{URL}" class="link" {Target}>{Name}</a> 
                         {/block:Link} 
                         
-                        {block:IndexPage} 
+                        {block:IndexPage}
                             <a href="{Permalink}" class="btn" title="{lang:View high resolution}">View Post</a>
-                        {/block:IndexPage} 
+                        {/block:IndexPage}
                         
                         {block:Caption}
                             <div class="caption">{Caption}</div>
@@ -169,24 +169,24 @@
             </ul>
             <footer>
                 {block:Pagination}
-                <div class="page-wrapper" id="page-nav">
-                    {block:NextPage}
-                        <a href="{NextPage}" id="next-button"><span class="icon-arrow-right icon-page"></span></a>
-                    {/block:NextPage}
-                </div>
+                    <div class="page-wrapper" id="page-nav">
+                        {block:NextPage}
+                            <a href="{NextPage}" id="next-button"><span class="icon-arrow-right icon-page"></span></a>
+                        {/block:NextPage}
+                    </div>
                 {/block:Pagination}
                 {block:IndexPage} 
-                <div class="js-page-load-status">
-                    <p class="infinite-scroll-request">
-                        <span class="txt-label-maker">Loading...</span>
-                    </p>
-                    <p class="infinite-scroll-last">
-                        <span class="txt-label-maker">End of content</span>
-                    </p>
-                    <p class="infinite-scroll-error">
-                        <span class="txt-label-maker">No more pages to load</span>
-                    </p>
-                </div>
+                    <div class="js-page-load-status">
+                        <p class="infinite-scroll-request">
+                            <span class="txt-label-maker">Loading...</span>
+                        </p>
+                        <p class="infinite-scroll-last">
+                            <span class="txt-label-maker">End of content</span>
+                        </p>
+                        <p class="infinite-scroll-error">
+                            <span class="txt-label-maker">No more pages to load</span>
+                        </p>
+                    </div>
                 {/block:IndexPage}
                 <div class="footer-copy">&copy; {CopyrightYears}</div>
                 <a href="{RSS}" {Target}>RSS</a>
