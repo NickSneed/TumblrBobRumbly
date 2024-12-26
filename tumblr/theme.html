@@ -46,9 +46,10 @@
             <header>
                 <section>
                     <img src="{image:Logo}"/>
-                    <h1><a href="/">{Title}</a></h1>
-                    <h2 class="txt-label-maker">{text:Tagline}</h2> {block:Description}
-                    <p>{Description}</p>
+                    <h1>{Title}</h1>
+                    <button class="txt-label-maker js-scroll-down">{text:Tagline}</button> 
+                    {block:Description}
+                        <p>{Description}</p>
                     {/block:Description}
                 </section>
             </header>
@@ -192,7 +193,7 @@
         </section>
     </section>
 
-	<script src="https://tumblrbobrumbly.pages.dev/main.js"></script>
+	<script src="https://tumblrbobrumbly.pages.dev/app.js"></script>
    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
