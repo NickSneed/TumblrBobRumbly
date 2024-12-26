@@ -38,7 +38,8 @@ header {
         -webkit-transform: rotate(3deg);
         transform: rotate(3deg);
 
-        a {
+        a,
+        a:visited {
             color: c.$white;
         }
     }
