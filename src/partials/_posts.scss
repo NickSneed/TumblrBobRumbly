@@ -29,7 +29,8 @@ Styles for the posts
     background: c.$white;
 }
 
-.photo-img {
+.photo-img,
+.post_media_photo {
     height: auto !important;
     margin-bottom: 15px;
     width: 100%;
@@ -50,9 +51,9 @@ Styles for the posts
     top: -2px;
 }
 
-.note-count, /* stylelint-disable-line selector-class-pattern */
-.like_button, /* stylelint-disable-line selector-class-pattern */
-.reblog_button { /* stylelint-disable-line selector-class-pattern */
+.note-count,
+.like_button,
+.reblog_button {
     float: left;
     margin: 0 10px 0 0;
 }
