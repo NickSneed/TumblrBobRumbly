@@ -3,6 +3,7 @@ Styles for the header
 */
 
 @use 'mediaqueries.scss' as m;
+@use 'colors.scss' as c;
 
 header {
     background-position: 50% 0;
@@ -28,6 +29,7 @@ header {
     }
 
     h1 {
+        color: c.$white;
         font-family: 'Overpass Mono', monospace;
         font-weight: 700;
         font-size: 2em;
