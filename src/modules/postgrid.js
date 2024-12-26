@@ -40,6 +40,11 @@ function init() {
         msnry.layout();
     });
 
+    // Trigger layout after the document loads
+    document.addEventListener('DOMContentLoaded', function() {
+        msnry.layout();
+    });
+
 }
 
 export default init;
