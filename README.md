@@ -5,7 +5,6 @@
 2. add animated down arrow
 3. clean up template
 4. view port height fix https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-5. dev env
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
