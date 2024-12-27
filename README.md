@@ -6,6 +6,7 @@
 3. clean up template
 4. view port height fix https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
 5. fade animation for up arrow
+6. dev env
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
