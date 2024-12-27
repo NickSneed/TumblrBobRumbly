@@ -12,7 +12,7 @@
         "compile:sass": "sass --no-source-map --style=compressed src/:dist/",
         "compile:js": "webpack",
         "watch:sass": "sass --watch --update --style=expanded src/:dist/",
-        "download:tumblr": "curl -o tumblr/local.html https://bobrumbly.com/ && powershell -Command \"(Get-Content tumblr/local.html) -replace 'https://tumblrbobrumbly.pages.dev/', '../dist/' | Set-Content tumblr/local.html\""
+        "download:tumblr": "powershell -File ./build/downloadTumblr.ps1"
     },
     "keywords": [],
     "author": "",
