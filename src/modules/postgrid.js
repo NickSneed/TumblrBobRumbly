@@ -8,7 +8,17 @@ const gridSizerSel = '.js-grid-sizer';
 const gutterSizerSel = '.js-gutter-sizer';
 const pageLoadStatusSel = '.js-page-load-status';
 
+// Check if body has class 'page-index'
+function isPageIndex() {
+    return document.body.classList.contains('page-index');
+}
+
 function init() {
+    // Check for index page
+    if (! isPageIndex()) {
+        return;
+    }
+
     // Define Masonry grid
     const masonryOptions = {
         itemSelector: postSel,

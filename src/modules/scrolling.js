@@ -3,7 +3,6 @@ const scrollDownButtonEl = document.querySelector('.js-scroll-down');
 const toTopButtonEl = document.querySelector('.js-to-top-arrow');
 const postsEl = document.querySelector('.js-posts');
 
-
 // Smooth scrolling down
 function scrollDown() {
     postsEl.scrollIntoView({
