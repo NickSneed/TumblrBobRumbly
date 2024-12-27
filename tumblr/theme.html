@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+<html>
 <head>
     <title>{Title}</title>
     
@@ -18,7 +17,7 @@
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     
     <link href="https://tumblrbobrumbly.pages.dev/styles.css" rel="stylesheet">
-
+    
     <style>
         .to-top-arrow {
             color: {color:Icons} !important;
@@ -40,7 +39,7 @@
 </head>
 
 <body class="{block:IndexPage}page-{currentPage} page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage} ">
-    <button class="to-top-arrow js-to-top"></button>
+    <button class="to-top-arrow js-to-top js-to-top-arrow"></button>
     <section class="main-wrapper cf">
         {block:IndexPage}
             <header>
@@ -65,7 +64,7 @@
                         {/block:Title} 
                         
                         {block:PermalinkPage} 
-                            <a href="/" class="btn" title="Back">
+                            <a href="/" class="btn js-back-button" title="Back">
                                 &lt; Back
                             </a>
                         {/block:PermalinkPage} 
@@ -175,17 +174,17 @@
                     </div>
                 {/block:Pagination}
                 {block:IndexPage} 
-                    <div class="js-page-load-status">
-                        <p class="infinite-scroll-request">
+                    <button class="page-load-status js-page-load-status js-to-top">
+                        <span class="infinite-scroll-request">
                             <span class="txt-label-maker">Loading...</span>
-                        </p>
-                        <p class="infinite-scroll-last">
+                        </span>
+                        <span class="infinite-scroll-last">
                             <span class="txt-label-maker">End of content</span>
-                        </p>
-                        <p class="infinite-scroll-error">
+                        </span>
+                        <span class="infinite-scroll-error">
                             <span class="txt-label-maker">No more pages to load</span>
-                        </p>
-                    </div>
+                        </span>
+                    </button>
                 {/block:IndexPage}
                 <div class="footer-copy">&copy; {CopyrightYears}</div>
                 <a href="{RSS}" {Target}>RSS</a>
@@ -194,6 +193,8 @@
     </section>
 
 	<script src="https://tumblrbobrumbly.pages.dev/app.js"></script>
+    <!-- script -->
+
    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
