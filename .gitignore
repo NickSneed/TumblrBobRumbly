@@ -24,7 +24,10 @@ dist/
 # Temporary files
 tmp/
 temp/
+
+# Local Tumblr files
 local.html
+local-post.html
 
 # MacOS specific files
 .DS_Store
