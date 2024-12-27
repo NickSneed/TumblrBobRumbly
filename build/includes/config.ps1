@@ -8,7 +8,7 @@ $postLinksRegex = 'https:\/\/bobrumbly\.com\/post\/.*?"'
 $maindir = 'local'
 
 # Name of the home page file after download
-$homename = 'home'
+$homename = 'index'
 
 # $prodCdnUrl gets replaced with $localStaticFilesPath
 $prodCdnUrl = 'https://tumblrbobrumbly.pages.dev/'

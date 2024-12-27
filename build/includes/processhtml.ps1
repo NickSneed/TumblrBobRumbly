@@ -22,7 +22,8 @@ function ProcessHtmlContent($filePath, $url) {
 
     # Replace home links
     $pattern = 'href="\/"'
-    $content = $content -replace $pattern, 'href="home.html"'
+    $homeLink = 'href="' + $homename + '.html"'
+    $content = $content -replace $pattern, $homeLink
 
     # Write to the file
     Set-Content -Path $filePath -Value $content
