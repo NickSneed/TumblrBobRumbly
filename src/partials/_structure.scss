@@ -13,16 +13,26 @@ Styles for the overall structure of the site
 .to-top-arrow {
     background: none;
     border: 0;
-    bottom: 30px;
+    bottom: -100px;
     cursor: pointer;
-    display: none;
     font-size: 70px;
     height: 40px;
     position: fixed;
     right: 30px;
+    transition: 0.2s ease-in-out;
     z-index: 100;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: c.$white;
+
+    &:after {
+        content: "^";
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: c.$white;
+    }
+
+    &.show {
+        transform: translate(0, -130px);
+    }
 
     @include m.for-small {  
         font-size: 100px;
@@ -32,12 +42,6 @@ Styles for the overall structure of the site
     @include m.for-xlarge {  
         font-size: 200px;
         height: 120px;
-    }
-
-    &:after {
-        content: "^";
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: c.$white;
     }
 }
 

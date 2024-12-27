@@ -21,9 +21,9 @@ function scrollToTop() {
 // Set the display of the button
 function setToTopDisplay() {
     if (window.scrollY > 500) {
-        scrollToTopButton.style.display = 'block';
+        scrollToTopButton.classList.add('show');
     } else {
-        scrollToTopButton.style.display = 'none';
+        scrollToTopButton.classList.remove('show');
     }
 }
 

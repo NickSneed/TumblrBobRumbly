@@ -11,8 +11,7 @@
         "compile:sass": "sass --no-source-map --style=compressed src/:dist/",
         "compile:js": "webpack",
         "watch:sass": "sass --watch --update --style=expanded src/:dist/",
-        "prod:build": "npm run compile:sass && npm run compile:js",
-        "prod:deploy": "git checkout main && git merge dev && git push && git checkout dev"
+        "prod:build": "npm run compile:sass && npm run compile:js"
     },
     "keywords": [],
     "author": "",

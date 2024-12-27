@@ -24,6 +24,7 @@ dist/
 # Temporary files
 tmp/
 temp/
+local.html
 
 # MacOS specific files
 .DS_Store
