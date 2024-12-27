@@ -5,15 +5,15 @@ function ProcessHtmlContent($filePath, $url) {
     $content = Get-Content $filePath -Raw
     $content = $content -replace $prodCdnUrl, $localStaticFilesPath
 
-    # Remove all script tags
-    $pattern = '<script\b[^>]*>((?s).*?)<\/script>'
+    # Remove all non-CDN script tags
+    $pattern = '<script\b(?![^>]*src="' + $localStaticFilesPath + ')[^>]*>((?s).*?)<\/script>'
     $content = $content -replace $pattern, ''
 
     # Remove all noscript tags
     $pattern = '<noscript\b[^>]*>((?s).*?)<\/noscript>'
     $content = $content -replace $pattern, ''
 
-    ## Remove all iframes
+    # Remove all iframes
     $pattern = '<iframe\b[^>]*>((?s).*?)<\/iframe>'
     $content = $content -replace $pattern, ''
 
