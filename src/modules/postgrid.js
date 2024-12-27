@@ -39,7 +39,7 @@ function init() {
         path: '#next-button',
         outlayer: msnry,
         status: pageLoadStatusSel,
-        history: 'replace',
+        history: false,
         prefill: true,
         append: postSel
     };
