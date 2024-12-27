@@ -12,7 +12,7 @@
         "compile:sass": "sass --no-source-map --style=compressed src/:dist/",
         "compile:js": "webpack",
         "watch:sass": "sass --watch --update --style=expanded src/:dist/",
-        "download:tumblr": "powershell -File ./build/downloadtumblr.ps1"
+        "download:tumblr": "cls && powershell -File ./build/downloadtumblr.ps1"
     },
     "keywords": [],
     "author": "",

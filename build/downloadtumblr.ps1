@@ -1,11 +1,18 @@
 $ProgressPreference='SilentlyContinue'
 
-function GetPostLinks($filePath) {
-    $content = Get-Content $filePath -Raw
-    $hrefSet = New-Object System.Collections.Generic.HashSet[string]
+$domain = 'https://bobrumbly.com/'
+$postLinksRegex = 'https:\/\/bobrumbly\.com\/post\/.*?"'
+$cdnUrl = 'https://tumblrbobrumbly.pages.dev/'
+$distPath = '../dist/'
 
-    $pattern = 'https:\/\/bobrumbly\.com\/post\/(.*?)"'
-    $matches = [regex]::Matches($content, $pattern)
+function GetPostLinksArr($filePath) {
+
+    # Get the content of the file
+    $content = Get-Content $filePath -Raw
+
+    # Find all the post links and return it as an array
+    $hrefSet = New-Object System.Collections.Generic.HashSet[string]
+    $matches = [regex]::Matches($content, $postLinksRegex)
     foreach ($match in $matches) {
         $href = $match.Value -replace '"', ''
         $hrefSet.Add($href) | Out-Null
@@ -14,7 +21,11 @@ function GetPostLinks($filePath) {
 }
 
 function GetPostID($url) {
+
+    # Regex pattern to match the post id
     $pattern = '\d+.*?';
+
+    # If there is a match return the post id
     if ($url -match $pattern) {
         return $($matches[0])
     } else {
@@ -22,16 +33,22 @@ function GetPostID($url) {
     }
 }
 
-function ReplacePostLinks($content) {
-    $pattern = 'https:\/\/bobrumbly\.com\/post\/.*?"'
-    $matches = [regex]::Matches($content, $pattern)
+function ReplacePostLinks($filePath) {
+
+    # Get the content of the file
+    $content = Get-Content $filePath -Raw
+
+    # Find all the post links and replace it with the new link
+    $matches = [regex]::Matches($content, $postLinksRegex)
     foreach ($match in $matches) {
         $oldlink = $match.Value -replace '"', ''
         $newlink = GetPostID $match.Value
         $newlink = $newlink + '.html'
         $content = $content -replace $oldlink, $newlink
     }
-    return $content
+
+    # Write to the file
+    Set-Content -Path $filePath -Value $content
 }
 
 function ProcessHtmlContent($filePath, $url) {
@@ -39,7 +56,7 @@ function ProcessHtmlContent($filePath, $url) {
 
     # Remap the cdn files to dist folder
     $content = Get-Content $filePath -Raw
-    $content = $content -replace 'https://tumblrbobrumbly.pages.dev/', '../dist/'
+    $content = $content -replace $cdnUrl, $distPath
 
     # Remove all script tags
     $pattern = '<script\b[^>]*>((?s).*?)<\/script>'
@@ -60,7 +77,11 @@ function ProcessHtmlContent($filePath, $url) {
     $pattern = 'href="\/"'
     $content = $content -replace $pattern, 'href="home.html"'
 
+    # Write to the file
     Set-Content -Path $filePath -Value $content
+
+    # Logging
+    Write-Host "Processing complete: $filePath"
 }
 
 # Define the path to the local folder
@@ -68,18 +89,19 @@ $localFolderPath = "local"
 
 # Check if the folder exists
 if (Test-Path $localFolderPath) {
-    # Remove all files and subdirectories within the folder
     Remove-Item "$localFolderPath\*" -Recurse -Force
-    Write-Host "Emptied the local folder: $localFolderPath"
+    Write-Host "Emptied the folder: $localFolderPath"
 } else {
     Write-Host "The folder does not exist: $localFolderPath"
 }
 
 # Process main page
-ProcessHtmlContent 'local/home.html' 'https://bobrumbly.com/'
+ProcessHtmlContent 'local/home.html' $domain
+
+# Get an array of post links
+$linkArr = GetPostLinksArr 'local/home.html'
 
 # Process post pages
-$linkArr = GetPostLinks 'local/home.html'
 foreach ($link in $linkArr) {
     $postID = GetPostID($link);
     $localFilePath = 'local/' + $postID + '.html'
