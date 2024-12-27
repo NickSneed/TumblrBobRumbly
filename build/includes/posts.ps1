@@ -5,9 +5,9 @@ function GetPostLinksArr($filePath) {
 
     # Find all the post links and return it as an array
     $hrefSet = New-Object System.Collections.Generic.HashSet[string]
-    $matches = [regex]::Matches($content, $postLinksRegex)
-    foreach ($match in $matches) {
-        $href = $match.Value -replace '"', ''
+    $postLinks = [regex]::Matches($content, $postLinksRegex)
+    foreach ($postLink in $postLinks) {
+        $href = $postLink.Value -replace '"', ''
         $hrefSet.Add($href) | Out-Null
     }
     return @($hrefSet)
@@ -32,10 +32,10 @@ function ReplacePostLinks($filePath) {
     $content = Get-Content $filePath -Raw
 
     # Find all the post links and replace it with the new link
-    $matches = [regex]::Matches($content, $postLinksRegex)
-    foreach ($match in $matches) {
-        $oldlink = $match.Value -replace '"', ''
-        $newlink = GetPostID $match.Value
+    $postLinks = [regex]::Matches($content, $postLinksRegex)
+    foreach ($postLink in $postLinks) {
+        $oldlink = $postLink.Value -replace '"', ''
+        $newlink = GetPostID $postLink.Value
         $newlink = $newlink + '.html'
         $content = $content -replace $oldlink, $newlink
     }

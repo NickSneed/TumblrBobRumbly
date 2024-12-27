@@ -1,5 +1,5 @@
 function ProcessHtmlContent($filePath, $url) {
-    curl -o $filePath $url
+    Invoke-WebRequest -o $filePath $url
 
     # Remap the cdn files to dist folder
     $content = Get-Content $filePath -Raw
