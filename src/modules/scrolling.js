@@ -1,11 +1,12 @@
-const scrollToTopButton = document.querySelector('.js-to-top');
-const scrollDownButton = document.querySelector('.js-scroll-down');
-const postsElement = document.querySelector('.js-posts');
+const scrollToTopButtonEls = document.querySelectorAll('.js-to-top');
+const scrollDownButtonEl = document.querySelector('.js-scroll-down');
+const toTopButtonEl = document.querySelector('.js-to-top-arrow');
+const postsEl = document.querySelector('.js-posts');
 
 
 // Smooth scrolling down
 function scrollDown() {
-    postsElement.scrollIntoView({
+    postsEl.scrollIntoView({
         behavior: 'smooth'
     });
 }
@@ -21,18 +22,20 @@ function scrollToTop() {
 // Set the display of the button
 function setToTopDisplay() {
     if (window.scrollY > 500) {
-        scrollToTopButton.classList.add('show');
+        toTopButtonEl.classList.add('show');
     } else {
-        scrollToTopButton.classList.remove('show');
+        toTopButtonEl.classList.remove('show');
     }
 }
 
 // Initialize
 function init() {
-    if (scrollToTopButton) {
-        // Event listeners for button clicks
-        scrollToTopButton.addEventListener('click', scrollToTop);
-        scrollDownButton.addEventListener('click', scrollDown);
+    if (scrollToTopButtonEls && scrollDownButtonEl) {
+        scrollToTopButtonEls.forEach(button => {
+            button.addEventListener('click', scrollToTop);
+        });
+
+        scrollDownButtonEl.addEventListener('click', scrollDown);
 
         // Show button when scrolled down
         window.addEventListener('scroll', () => {
