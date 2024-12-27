@@ -6,6 +6,7 @@ function updateViewHeight() {
 }
 
 function init() {
+    // Update the --vh value on page load
     updateViewHeight();
 
     // Update the --vh value when the window is resized
