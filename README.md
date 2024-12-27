@@ -5,6 +5,7 @@
 2. redesign header
 3. add animated down arrow
 4. clean up template
+5. view port height fix https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
