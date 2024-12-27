@@ -19,14 +19,20 @@ function ProcessHtmlContent($filePath, $url) {
     $pattern = '<iframe\b[^>]*>((?s).*?)<\/iframe>'
     $content = $content -replace $pattern, ''
 
-    # Readd app scripts
+    # Re-add app scripts
     $content = $content -replace '<!-- script -->', '<script src="../dist/app.js"></script>'
 
+    # Replace links
+    $pattern = 'href="https:\/\/bobrumbly\.com\/post\/.*?"'
+    $content = $content -replace $pattern, 'href="post.html"'
+    $pattern = 'href="\/"'
+    $content = $content -replace $pattern, 'href="home.html"'
+    
     Set-Content -Path $filePath -Value $content
 }
 
 # Process main page
-ProcessHtmlContent 'tumblr/local.html' 'https://bobrumbly.com/'
+ProcessHtmlContent 'local/home.html' 'https://bobrumbly.com/'
 
 # Process post page
-ProcessHtmlContent 'tumblr/local-post.html' 'https://bobrumbly.com/post/770964072259895296/mario'
+ProcessHtmlContent 'local/post.html' 'https://bobrumbly.com/post/770964072259895296/mario'
