@@ -21,8 +21,10 @@ iframe#youtube_iframe {
     padding: 0 0.3em;
     text-shadow: 1px 1px 3px #5a5a5a;
     transform: rotate(-2deg);
-    -ms-transform: rotate(-2deg);
-    -webkit-transform: rotate(-2deg);
+
+    &:hover {
+        transform: rotate(0deg);
+    }
 }
 
 .btn {
@@ -37,5 +39,10 @@ iframe#youtube_iframe {
 
     &:visited {
         color: c.$gray;
+    }
+
+    &:hover {
+        background: c.$red;
+        color: c.$white;
     }
 }

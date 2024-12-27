@@ -20,7 +20,7 @@ function scrollToTop() {
 
 // Set the display of the button
 function setToTopDisplay() {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 200) {
         toTopButtonEl.classList.add('show');
     } else {
         toTopButtonEl.classList.remove('show');
@@ -29,12 +29,12 @@ function setToTopDisplay() {
 
 // Initialize
 function init() {
-    if (scrollToTopButtonEls && scrollDownButtonEl) {
+
+    // Init to top buttons
+    if (scrollToTopButtonEls) {
         scrollToTopButtonEls.forEach(button => {
             button.addEventListener('click', scrollToTop);
         });
-
-        scrollDownButtonEl.addEventListener('click', scrollDown);
 
         // Show button when scrolled down
         window.addEventListener('scroll', () => {
@@ -43,6 +43,11 @@ function init() {
 
         // Set initial display
         setToTopDisplay()
+    }
+    
+    // Init scroll down button
+    if (scrollDownButtonEl) {
+        scrollDownButtonEl.addEventListener('click', scrollDown);
     }
 }
 

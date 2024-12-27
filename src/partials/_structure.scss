@@ -34,6 +34,10 @@ Styles for the overall structure of the site
         transform: translate(0, -130px);
     }
 
+    &:hover:after {
+        color: c.$red;
+    }
+
     @include m.for-small {  
         font-size: 100px;
         height: 70px;

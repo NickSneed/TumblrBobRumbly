@@ -8,7 +8,7 @@ const gridSizerSel = '.js-grid-sizer';
 const gutterSizerSel = '.js-gutter-sizer';
 const pageLoadStatusSel = '.js-page-load-status';
 
-// Check if body has class 'page-index'
+// Check page is index
 function isPageIndex() {
     return document.body.classList.contains('page-index');
 }
