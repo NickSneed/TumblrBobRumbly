@@ -1,5 +1,7 @@
 # BobRumbly Tumblr
 
+bobrumbly.com
+
 ## To do:
 1. change to em
 2. clean up template
