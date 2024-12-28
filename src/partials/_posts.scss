@@ -29,8 +29,7 @@ Styles for the posts
     background: c.$white;
 }
 
-.photo-img,
-.post_media_photo {
+.photo-img {
     height: auto !important;
     margin-bottom: 15px;
     width: 100%;
@@ -66,6 +65,10 @@ Styles for the posts
     img {
         height: auto !important;
         width: 100%;
+    }
+
+    > div:last-of-type {
+        margin-bottom: 15px;
     }
 }
 

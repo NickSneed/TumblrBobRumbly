@@ -12,7 +12,7 @@
         "compile:js": "webpack",
         "watch:sass": "sass --watch --update --style=expanded src/:dist/",
         "download": "cls && powershell -File ./downloader/download.ps1",
-        "deploy": "npm run compile:sass && npm run compile:js && gh-pages -d dist"
+        "deploy": "npm run compile:sass && npm run compile:js && gh-pages -d dist --cname ghpages.bobrumbly.com"
     },
     "keywords": [],
     "author": "",
