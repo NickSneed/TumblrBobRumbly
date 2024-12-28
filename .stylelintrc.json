@@ -1,0 +1,16 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "at-rule-no-unknown": null,
+        "selector-id-pattern": null,
+        "selector-pseudo-element-colon-notation": "single",
+        "property-no-vendor-prefix": null,
+        "no-descending-specificity": null,
+        "color-hex-length": null,
+        "alpha-value-notation": "number",
+        "color-function-notation": null,
+        "no-invalid-position-at-import-rule": null,
+        "selector-class-pattern": null
+    }
+}

@@ -1,0 +1,35 @@
+# Node modules directory
+node_modules/
+
+# Build output directory
+dist/
+
+# Optional npm cache directory
+.npm
+
+# Environment variables
+.env
+.env.test
+.env.production
+.env.local
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Temporary files
+tmp/
+temp/
+
+# Local Tumblr files
+local/
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
