@@ -8,9 +8,9 @@ https://www.bobrumbly.com
 3. have node server download local files on the fly
 4. animate controllers
 
-Style lint rules:__
-https://stylelint.io/user-guide/rules__
+Style lint rules:<br />
+https://stylelint.io/user-guide/rules<br />
 https://www.npmjs.com/package/stylelint-scss
 
-Tumblr docs:__
+Tumblr docs:<br />
 https://www.tumblr.com/docs/en/custom_themes
