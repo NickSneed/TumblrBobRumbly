@@ -32,5 +32,6 @@ foreach ($link in $linkArr) {
 # Replace post links
 ReplacePostLinks $localHomeFilePath
 
+# Load the home page
 $filePath = $maindir + '/' + $homename + '.html'
 Start-Process $filePath
