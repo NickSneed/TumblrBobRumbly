@@ -3,6 +3,7 @@ Styles that override base elements
 */
 
 @use 'colors.scss' as c;
+@use 'mediaqueries.scss' as m;
 
 *,
 html {
@@ -15,6 +16,10 @@ body {
     font: 400 13px/1.8em 'Varela Round', sans-serif;
     margin: 0;
     padding: 0 0 60px;
+
+    @include m.for-large {  
+        font-size: 15px;
+    }
 }
 
 button {
