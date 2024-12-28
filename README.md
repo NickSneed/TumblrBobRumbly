@@ -1,6 +1,6 @@
 # BobRumbly Tumblr
 
-bobrumbly.com
+https://www.bobrumbly.com
 
 ## To do:
 1. change to em
