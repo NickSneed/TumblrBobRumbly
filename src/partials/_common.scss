@@ -36,12 +36,14 @@ iframe#youtube_iframe {
     color: c.$white;
     text-decoration: none;
     text-transform: capitalize;
+    transition: background-color 0.2s ease-in-out;
 
     &:visited {
         color: c.$gray;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background: c.$red;
         color: c.$white;
     }

@@ -26,6 +26,7 @@ Styles for the overall structure of the site
 
     &:after {
         content: "^";
+        transition: 0.2s ease-in-out;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: c.$white;
     }

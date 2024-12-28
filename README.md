@@ -4,6 +4,7 @@
 1. change to em
 2. clean up template
 3. have node server download local files on the fly
+4. animate controllers
 
 Style lint rules:
 https://stylelint.io/user-guide/rules
