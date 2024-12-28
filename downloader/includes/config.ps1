@@ -16,6 +16,6 @@ $homename = 'index'
 
 # $prodCdnUrl gets replaced with $localStaticFilesPath
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", "")]
-$prodCdnUrl = 'https://nicksneed.github.io/TumblrBobRumbly'
+$prodCdnUrl = 'https://ghpages.bobrumbly.com'
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", "")]
 $localStaticFilesPath = '../dist/'
