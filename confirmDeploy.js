@@ -10,7 +10,7 @@ rl.question('Are you sure you want to deploy? (yes/no) ', (answer) => {
     if (answer.toLowerCase() === 'yes') {
         console.log('Deploying...');
         const { exec } = require('child_process');
-        exec('npm run compile:sass && npm run compile:js && gh-pages -d dist --cname ghpages.bobrumbly.com', (err, stdout, stderr) => {
+        exec('npm run build && gh-pages -d dist --cname ghpages.bobrumbly.com', (err, stdout, stderr) => {
             if (err) {
                 console.error(`Error: ${err.message}`);
                 return;
