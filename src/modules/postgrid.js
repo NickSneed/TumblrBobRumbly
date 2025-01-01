@@ -55,6 +55,10 @@ function init() {
         msnry.layout();
     });
 
+    // Trigger layout after the window loads
+    window.onload = function() {
+        msnry.layout();
+    };
 }
 
 export default init;
