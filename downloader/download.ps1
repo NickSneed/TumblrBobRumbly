@@ -2,17 +2,12 @@
 . "$PSScriptRoot/includes/posts.ps1"
 . "$PSScriptRoot/includes/processhtml.ps1"
 
-$ProgressPreference='SilentlyContinue'
-
-# Define the path to the local folder
-$localFolderPath = "local"
-
 # Check if the folder exists
-if (Test-Path $localFolderPath) {
-    Remove-Item "$localFolderPath\*" -Recurse -Force
-    Write-Host "Emptied the folder: $localFolderPath"
+if (Test-Path $maindir) {
+    Remove-Item "$maindir\*" -Recurse -Force
+    Write-Host "Emptied the folder: $maindir"
 } else {
-    Write-Host "The folder does not exist: $localFolderPath"
+    Write-Host "The folder does not exist: $maindir"
 }
 
 # Process main page

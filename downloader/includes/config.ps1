@@ -1,3 +1,6 @@
+# Disable blue popup in terminal
+$ProgressPreference='SilentlyContinue'
+
 # Domain to download
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", "")]
 $domain = 'https://bobrumbly.com/'
