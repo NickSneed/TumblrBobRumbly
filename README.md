@@ -5,8 +5,7 @@ https://www.bobrumbly.com
 ## To do:
 1. change to em
 2. clean up template
-3. have node server download local files on the fly
-4. animate controllers
+3. animate controllers
 
 Style lint rules:<br />
 https://stylelint.io/user-guide/rules<br />
