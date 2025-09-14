@@ -13,7 +13,7 @@ Styles for the overall structure of the site
 .to-top-bar {
     background: none;
     border: 0;
-    bottom: -100px;
+    bottom: -150px;
     height: 100px;
     left: 0;
     pointer-events: none;
@@ -42,30 +42,33 @@ Styles for the overall structure of the site
         background: none;
         bottom: 30px;
         height: 50px;
+        font-size: 70px;
         pointer-events: all;
         position: absolute;
         right: 30px;
         width: 50px;
         z-index: 2;
 
+        @include m.for-small {
+            font-size: 100px;
+        }
+
+        @include m.for-xlarge {
+            font-size: 200px;
+            height: 100px;
+            width: 100px;
+        }
+
         &:after {
             content: "^";
             color: c.$black;
+            line-height: 1;
             display: block;
-            font-size: 70px;
             position: relative;
             transition: 0.2s ease-in-out;
             z-index: 2;
             -webkit-text-stroke-width: 2px;
             -webkit-text-stroke-color: c.$white;
-
-            @include m.for-small {
-                font-size: 100px;
-            }
-
-            @include m.for-xlarge {
-                font-size: 200px;
-            }
         }
 
         &:hover:after {
@@ -74,7 +77,7 @@ Styles for the overall structure of the site
     }
 
     &.show {
-        transform: translate(0, -100px);
+        transform: translate(0, -150px);
     }
 }
 
