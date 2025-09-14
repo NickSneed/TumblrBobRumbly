@@ -10,43 +10,71 @@ Styles for the overall structure of the site
     position: relative;
 }
 
-.to-top-arrow {
+.to-top-bar {
     background: none;
     border: 0;
     bottom: -100px;
-    cursor: pointer;
-    font-size: 70px;
-    height: 40px;
+    height: 100px;
+    left: 0;
+    pointer-events: none;
     position: fixed;
-    right: 30px;
     transition: 0.2s ease-in-out;
+    width: 100%;
     z-index: 100;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: c.$white;
 
     &:after {
-        content: "^";
-        transition: 0.2s ease-in-out;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: c.$white;
+        backdrop-filter: blur(5px);
+        background: rgba(255, 255, 255, 0.1);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        mask: linear-gradient(to bottom, transparent, white 70%);
+        z-index: 1;
+    }
+
+    .to-top-arrow {
+        background: none;
+        bottom: 30px;
+        height: 50px;
+        pointer-events: all;
+        position: absolute;
+        right: 30px;
+        width: 50px;
+        z-index: 2;
+
+        &:after {
+            content: "^";
+            color: c.$black;
+            display: block;
+            font-size: 70px;
+            position: relative;
+            transition: 0.2s ease-in-out;
+            z-index: 2;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: c.$white;
+
+            @include m.for-small {
+                font-size: 100px;
+            }
+
+            @include m.for-xlarge {
+                font-size: 200px;
+            }
+        }
+
+        &:hover:after {
+            color: c.$red;
+        }
     }
 
     &.show {
-        transform: translate(0, -130px);
-    }
-
-    &:hover:after {
-        color: c.$red;
-    }
-
-    @include m.for-small {  
-        font-size: 100px;
-        height: 70px;
-    }
-
-    @include m.for-xlarge {  
-        font-size: 200px;
-        height: 120px;
+        transform: translate(0, -100px);
     }
 }
 
