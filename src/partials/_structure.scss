@@ -24,20 +24,6 @@ Styles for the overall structure of the site
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: c.$white;
 
-    &:after {
-        backdrop-filter: blur(5px);
-        background: rgba(255, 255, 255, 0.1);
-        content: '';
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        mask: linear-gradient(to bottom, transparent, white 70%);
-        z-index: 1;
-    }
-
     .to-top-arrow {
         background: none;
         bottom: 30px;
